@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "id": "ocrmypdf", "name": "OCRmyPDF", "version": "17.10.0",
+      "homepage": "https://ocrmypdf.readthedocs.io",
+      "note": "Not bundled, expected on PATH. Installing it via Homebrew also installs Tesseract, Ghostscript, and qpdf as its own dependencies — nothing else to install separately. Version is what this app was last tested against — see internal/engine/engine.go's checkToolVersions for the runtime drift check.",
+      "install": { "macos": "brew install ocrmypdf" }
+    }
+  ],
+  "requirements": [
+    { "id": "chromium-browser", "name": "Chrome or Chromium-based browser", "homepage": "https://www.google.com/chrome/", "note": "Any Chromium-based browser works: Google Chrome, Chromium, Brave, Microsoft Edge, or Arc. Used to render the app's own UI window, same as the rest of this family of apps.", "install": { "macos": "brew install --cask google-chrome" } }
+  ]
+}

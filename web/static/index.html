@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF OCR</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="app">
+
+  <div id="dropZone" class="drop-zone">
+    <p class="drop-title">Drop a scanned PDF here</p>
+    <p class="drop-sub">or click to choose — makes it searchable and selectable</p>
+    <input id="fileInput" type="file" accept=".pdf" hidden>
+  </div>
+
+  <div id="error" class="error hidden"></div>
+
+  <section id="workspace" class="workspace hidden">
+    <div class="file-card">
+      <span id="fileName" class="file-name"></span>
+    </div>
+
+    <div class="fields">
+      <label class="field">Language
+        <select id="language"></select>
+      </label>
+    </div>
+
+    <div class="options">
+      <label class="checkbox">
+        <input id="cleanup" type="checkbox">
+        <span>Straighten and rotate pages automatically</span>
+      </label>
+      <label class="checkbox">
+        <input id="ocrExistingText" type="checkbox">
+        <span>Also OCR pages that already have text</span>
+      </label>
+    </div>
+
+    <button id="runBtn" class="btn primary save-btn" type="button">Run OCR</button>
+
+    <div id="progress" class="progress hidden">
+      <div class="spinner" aria-hidden="true"></div>
+      <div id="progressLabel" class="progress-label">Running OCR…</div>
+      <button id="cancelJob" class="link-btn" type="button">Cancel</button>
+    </div>
+
+    <div id="doneActions" class="done-actions hidden">
+      <span id="doneMessage" class="done-message"></span>
+      <div class="done-buttons">
+        <button id="openFile" class="btn" type="button">Open file</button>
+        <button id="showFolder" class="btn" type="button">Show in folder</button>
+      </div>
+    </div>
+
+    <button id="startOver" class="link-btn" type="button">Start over</button>
+  </section>
+
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
