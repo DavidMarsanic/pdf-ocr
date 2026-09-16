@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/DavidMarsanic/pdf-ocr/internal/paths"
+	"github.com/DavidMarsanic/brightencode-appkit/paths"
 )
 
 // Engine is the whole pdf-ocr backend, independent of any UI.
